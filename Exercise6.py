@@ -1,4 +1,5 @@
 from bottle import run, route, run, get, post, template
+from sys import argv
 import json
 
 images=["http://lh4.ggpht.com/U9JYgruXI7rIiZaojqKz39xtCEgp_lgaBRzwiMdoR8STEJDK291yW0R0OF0PvP1j16ULuLo22bBOI16PKw",
@@ -17,7 +18,7 @@ def getImages():
     return json.dumps(images)
 
 def main():
-    run(host='localhost', port=7001, debug=True)
+    run(host='0.0.0.0', port=argv[1])
 
 if __name__=="__main__":
     main()
