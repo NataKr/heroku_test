@@ -18,9 +18,8 @@
 <body>
 
   <script>
-    var path=window.location.protocol+window.location.host;
     $(document).ready(function(){
-      $.get(path+"/getImages",
+      $.get("/getImages",
         function(data){
          var picturesArray = JSON.parse(data);
          console.log(picturesArray);
